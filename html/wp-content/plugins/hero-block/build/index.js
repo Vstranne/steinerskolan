@@ -46,21 +46,28 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)('create-block/hero-block', {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("create-block/hero-block", {
   title: "Hero Block hehehe",
   description: "hero block shown on the front page",
   icon: "carrot",
   category: "common",
   attributes: {
     title: {
-      type: 'string',
-      source: 'html',
-      selector: 'h2'
+      source: "text",
+      selector: ".card__title"
     },
     body: {
-      type: 'string',
-      source: 'html',
-      selector: 'p'
+      type: "array",
+      source: "children",
+      selector: ".card__body"
+    },
+    imageAlt: {
+      attribute: "alt",
+      selector: ".card__image"
+    },
+    imageUrl: {
+      attribute: "src",
+      selector: "card__image"
     }
   },
 
@@ -69,39 +76,54 @@ __webpack_require__.r(__webpack_exports__);
    */
   edit: ({
     attributes,
+    className,
     setAttributes
   }) => {
-    const {
-      title,
-      body
-    } = attributes;
-
-    function onChangeTitle(newTitle) {
-      setAttributes({
-        title: newTitle
-      });
-    }
-
-    function onChangeBody(newBody) {
-      setAttributes({
-        body: newBody
-      });
-    }
+    const getImageButton = openEvent => {
+      if (attributes.imageUrl) {
+        return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+          src: attributes.imageUrl,
+          onClick: openEvent,
+          className: "image"
+        });
+      } else {
+        return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+          className: "button-container"
+        }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+          onClick: openEvent,
+          className: "button button-large"
+        }, "Pick an image"));
+      }
+    };
 
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      class: "cta-container"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-      key: "editable",
-      tagName: "h2",
-      placeholder: "Your CTA title",
-      value: title,
-      onChange: onChangeTitle
+      className: "hero-container"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
+      onChange: content => setAttributes({
+        title: content
+      }),
+      value: attributes.title,
+      placeholder: "Your Hero Title",
+      className: "heading"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-      key: "editable",
-      tagName: "h2",
-      placeholder: "Your CTA body",
-      value: body,
-      onChange: onChangeBody
+      onChange: content => setAttributes({
+        body: content
+      }),
+      value: attributes.body,
+      multiline: "p",
+      placeholder: "Your Hero Text"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+      onSelect: media => {
+        setAttributes({
+          imageAlt: media.alt,
+          imageUrl: media.url
+        });
+      },
+      type: "image",
+      value: attributes.imageID,
+      render: ({
+        open
+      }) => getImageButton(open)
     }));
   },
 
@@ -111,16 +133,35 @@ __webpack_require__.r(__webpack_exports__);
   save: ({
     attributes
   }) => {
-    const {
-      title,
-      body
-    } = attributes;
+    const cardImage = (src, alt) => {
+      if (!src) return null;
+
+      if (alt) {
+        return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+          className: "card__image",
+          src: src,
+          alt: alt
+        });
+      } // if no alt selected
+
+
+      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+        className: "card__image",
+        src: src,
+        alt: "",
+        "aria-hidden": "true"
+      });
+    };
+
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "cta-container"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, title, " "), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText.Content, {
-      tagName: "p",
-      value: body
-    }));
+      className: "card"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "card__content"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: "card__title"
+    }, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "card__body"
+    }, attributes.body)), cardImage(attributes.imageUrl, attributes.imageAlt));
   }
 });
 
