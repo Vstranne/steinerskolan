@@ -1,0 +1,57 @@
+/*
+Theme Name: Steinertheme
+*/
+
+* {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: grey;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #bdd0ec;
+}
+.left-nav {
+  margin: 10px;
+}
+.right-nav {
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+li {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #4a4d5e;
+}
+
+.upper-text {
+  justify-content: right;
+  margin-right: 10px;
+}
+
+.upper-text > li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.lower-text {
+  font-weight: bold;
+  margin-right: 10px;
+}
