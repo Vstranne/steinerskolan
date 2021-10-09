@@ -17,3 +17,13 @@ add_theme_support(
         'flex-height' => true,
     )
 );
+
+add_theme_support('menus');
+
+register_nav_menus(
+
+    array(
+
+        'nav' => _('nav', 'theme'),
+    )
+);
