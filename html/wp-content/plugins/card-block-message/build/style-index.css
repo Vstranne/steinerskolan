@@ -1,0 +1,37 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-card-block-message {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 80px);
+  background-color: #bdd0ec;
+  padding: 40px;
+}
+.message .message__cards__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.message .message__wrapper {
+  padding: 100px;
+}
+.message .message__wrapper h2 {
+  font-size: 64px;
+  background-color: #ffebfb;
+  padding: 100px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
