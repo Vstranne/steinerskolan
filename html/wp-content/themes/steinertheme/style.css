@@ -2,16 +2,33 @@
 Theme Name: Steinertheme
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
 * {
   margin: 0;
-  font-family: "Nunito", sans-serif;
 }
 
 body {
   background: grey;
 }
 
+h3 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 10px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 10px;
+}
+
 nav {
+  font-family: "Nunito", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,4 +71,19 @@ a {
 .lower-text {
   font-weight: bold;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  h3 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 12px;
+    margin: 0px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
 }

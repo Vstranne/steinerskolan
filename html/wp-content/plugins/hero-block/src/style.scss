@@ -12,5 +12,56 @@
 }
 
 .card {
-	background-color: cornflowerblue;
+	background-color: #ffebfb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.card__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-family: "Nunito", sans-serif;
+		color: #4a4d5e;
+		margin: 15px;
+		width: 50%;
+		.card__title {
+			font-size: 56px;
+			font-weight: 700;
+			line-height: 1.2;
+			max-width: 800px;
+			margin: 10px;
+			@media (max-width: 800px) {
+				font-size: 36px;
+			}
+		}
+
+		.card__body {
+			font-weight: 400;
+			font-size: 18px;
+			max-width: 800px;
+			margin: 10px;
+		}
+	}
+	.card__image__wrapper {
+		display: flex;
+		width: 50%;
+		align-self: stretch;
+		.card__image {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+	.card {
+		flex-direction: column;
+		.card__image__wrapper {
+			width: auto;
+			height: 50%;
+		}
+	}
 }

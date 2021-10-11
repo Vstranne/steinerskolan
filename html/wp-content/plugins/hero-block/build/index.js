@@ -161,7 +161,9 @@ __webpack_require__.r(__webpack_exports__);
       className: "card__title"
     }, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "card__body"
-    }, attributes.body)), cardImage(attributes.imageUrl, attributes.imageAlt));
+    }, attributes.body)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "card__image__wrapper"
+    }, cardImage(attributes.imageUrl, attributes.imageAlt)));
   }
 });
 

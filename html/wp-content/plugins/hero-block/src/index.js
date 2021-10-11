@@ -132,7 +132,9 @@ registerBlockType("create-block/hero-block", {
 					<h3 className="card__title">{attributes.title}</h3>
 					<div className="card__body">{attributes.body}</div>
 				</div>
-				{cardImage(attributes.imageUrl, attributes.imageAlt)}
+				<div className="card__image__wrapper">
+					{cardImage(attributes.imageUrl, attributes.imageAlt)}
+				</div>
 			</div>
 		);
 	},

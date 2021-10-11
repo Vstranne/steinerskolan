@@ -14,7 +14,60 @@
 }
 
 .card {
-  background-color: cornflowerblue;
+  background-color: #ffebfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .card__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  color: #4a4d5e;
+  margin: 15px;
+  width: 50%;
+}
+.card .card__content .card__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 10px;
+}
+@media (max-width: 800px) {
+  .card .card__content .card__title {
+    font-size: 36px;
+  }
+}
+.card .card__content .card__body {
+  font-weight: 400;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 10px;
+}
+.card .card__image__wrapper {
+  display: flex;
+  width: 50%;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+.card .card__image__wrapper .card__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .card {
+    flex-direction: column;
+  }
+  .card .card__image__wrapper {
+    width: auto;
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/
