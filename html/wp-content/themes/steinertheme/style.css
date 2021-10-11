@@ -42,15 +42,12 @@ nav {
   width: 600px;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style-type: none;
-}
-
 li {
   margin: 10px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a {
@@ -59,7 +56,10 @@ a {
 }
 
 .upper-text {
+  display: flex;
+  align-items: center;
   justify-content: right;
+  list-style-type: none;
   margin-right: 10px;
 }
 
@@ -69,8 +69,36 @@ a {
 }
 
 .lower-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
   font-weight: bold;
   margin-right: 10px;
+}
+
+footer {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #bdd0ec;
+}
+
+.right-footer {
+  display: flex;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.icon-container {
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.icon-container > img {
+  margin: 5px;
 }
 
 @media screen and (max-width: 1000px) {
