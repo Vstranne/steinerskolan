@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-contact-find-us-block {
+	background-color: #21759b;
+	padding: 2px;
+	padding: 20px;
+}
+.gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	// height: 500px;
+	// width: 600px;
+}
+.mapouter {
+	position: relative;
+	text-align: right;
+	// height: 500px;
+	// width: 600px;
+}
+.contact__find__us {
+	width: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	padding: 50px;
+
+	.contact__find__us__container {
+		background-color: #bdd0ec;
+		display: flex;
+		flex-direction: row;
+	}
+	.contact__find__us__map {
+		max-width: 50%;
+	}
+	.contact__find__us__content {
+		width: 50%;
+	}
+}
