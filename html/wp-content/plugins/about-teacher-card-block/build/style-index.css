@@ -1,0 +1,48 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-about-teacher-card-block {
+  background-color: #21759b;
+  color: black;
+  padding: 2px;
+}
+
+.teacher__card {
+  height: 692px;
+  width: 360px;
+  background-color: white;
+  position: relative;
+}
+.teacher__card img {
+  border-radius: 50%;
+  height: 360px;
+  width: 360px;
+  position: absolute;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.teacher__card .teacher__card__content__container {
+  background-color: #c4d7bc;
+  box-shadow: 8px 8px 0px #e0efda;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  height: 512px;
+  width: 360px;
+}
+.teacher__card .teacher__card__content__container .teacher__card__content {
+  margin: 200px 20px 24px 20px;
+}
+.teacher__card .teacher__card__content__container .teacher__card__content h4 {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
