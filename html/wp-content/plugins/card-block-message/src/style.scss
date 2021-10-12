@@ -17,7 +17,7 @@
 	justify-content: center;
 	font-family: "Nunito", sans-serif;
 	color: #4a4d5e;
-	background-color: #bdd0ec;
+	background-color: #fff;
 	padding: 100px;
 
 	.message__cards__wrapper {
@@ -35,6 +35,10 @@
 			padding: 100px;
 			background-color: #ffebfb;
 			max-width: 1400px;
+			text-align: center;
+			background: #ffebfb;
+			box-shadow: 7px 9px 0px 1px #f5e1f1;
+			border-radius: 10px;
 		}
 	}
 }

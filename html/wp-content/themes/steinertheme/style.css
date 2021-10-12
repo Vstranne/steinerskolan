@@ -109,9 +109,12 @@ footer {
   margin: 5px;
 }
 
-@media screen and (max-width: 1000px) {
-  h3 {
+@media screen and (max-width: 1200px) {
+  h1 {
     font-size: 36px;
+  }
+  h3 {
+    font-size: 18px;
   }
   p {
     font-size: 12px;
@@ -122,4 +125,7 @@ footer {
 /* Mobile */
 
 @media screen and (max-width: 480px) {
+  .right-nav {
+    display: none;
+  }
 }

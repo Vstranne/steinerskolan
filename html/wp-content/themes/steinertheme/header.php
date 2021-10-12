@@ -28,9 +28,6 @@
                 <ul class="lower-text">
                     <?php foreach ($menuItems as $item) : ?>
                     <li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
-                    <!-- <li><a href="news.asp">Om skolan</a></li>
-                    <li><a href="contact.asp">Ansökan</a></li>
-                    <li><a href="about.asp">Kontakt</a></li> -->
                     <?php endforeach; ?>
                 </ul>
         </div>
