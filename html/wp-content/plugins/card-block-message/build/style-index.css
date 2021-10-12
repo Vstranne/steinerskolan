@@ -16,22 +16,27 @@
 .message {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 80px);
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  color: #4a4d5e;
   background-color: #bdd0ec;
-  padding: 40px;
+  padding: 100px;
 }
 .message .message__cards__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .message .message__wrapper {
-  padding: 100px;
-}
-.message .message__wrapper h2 {
-  font-size: 64px;
   background-color: #ffebfb;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.message .message__wrapper .message__body {
   padding: 100px;
+  background-color: #ffebfb;
+  max-width: 1400px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

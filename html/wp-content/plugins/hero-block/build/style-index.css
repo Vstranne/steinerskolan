@@ -30,11 +30,8 @@
   width: 50%;
 }
 .card .card__content .card__title {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
+  margin: 15px;
   max-width: 800px;
-  margin: 10px;
 }
 @media (max-width: 800px) {
   .card .card__content .card__title {
@@ -42,10 +39,8 @@
   }
 }
 .card .card__content .card__body {
-  font-weight: 400;
-  font-size: 18px;
+  margin: 15px;
   max-width: 800px;
-  margin: 10px;
 }
 .card .card__image__wrapper {
   display: flex;

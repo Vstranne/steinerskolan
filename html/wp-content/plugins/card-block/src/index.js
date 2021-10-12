@@ -118,6 +118,7 @@ registerBlockType("create-block/card-block", {
 				<div className="small__card__content">
 					<h3 className="small__card__title">{attributes.title}</h3>
 					<div className="small__card__body">{attributes.body}</div>
+					<a href="">Läs mer</a>
 				</div>
 			</div>
 		);

@@ -140,7 +140,9 @@ __webpack_require__.r(__webpack_exports__);
       className: "small__card__title"
     }, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "small__card__body"
-    }, attributes.body)));
+    }, attributes.body), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+      href: ""
+    }, "L\xE4s mer")));
   }
 });
 

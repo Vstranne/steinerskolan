@@ -129,7 +129,7 @@ registerBlockType("create-block/hero-block", {
 		return (
 			<div className="card">
 				<div className="card__content">
-					<h3 className="card__title">{attributes.title}</h3>
+					<h1 className="card__title">{attributes.title}</h1>
 					<div className="card__body">{attributes.body}</div>
 				</div>
 				<div className="card__image__wrapper">

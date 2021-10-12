@@ -26,21 +26,16 @@
 		margin: 15px;
 		width: 50%;
 		.card__title {
-			font-size: 56px;
-			font-weight: 700;
-			line-height: 1.2;
+			margin: 15px;
 			max-width: 800px;
-			margin: 10px;
 			@media (max-width: 800px) {
 				font-size: 36px;
 			}
 		}
 
 		.card__body {
-			font-weight: 400;
-			font-size: 18px;
+			margin: 15px;
 			max-width: 800px;
-			margin: 10px;
 		}
 	}
 	.card__image__wrapper {

@@ -12,13 +12,24 @@
 }
 
 .small__card {
-	border: 1px solid red;
-	height: 540px;
+	background-color: #c4d7bc;
+	height: 510px;
 	width: 360px;
-
-	img {
-		height: 242px;
-		width: 360px;
-		object-fit: cover;
+	.small__card__title {
+		margin: 15px;
+	}
+	.small__card__body {
+		margin: 15px;
+	}
+	// img {
+	// 	height: 242px;
+	// 	width: 360px;
+	// 	object-fit: cover;
+	// }
+	a {
+		margin: 15px;
+		font-size: 18px;
+		font-weight: 700;
+		text-decoration: underline;
 	}
 }

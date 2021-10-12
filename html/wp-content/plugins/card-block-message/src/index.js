@@ -59,7 +59,7 @@ registerBlockType("create-block/card-block-message", {
 					<InnerBlocks.Content />
 				</div>
 				<div className="message__wrapper">
-					<h2 className="message__body">{attributes.body}</h2>
+					<h1 className="message__body">{attributes.body}</h1>
 				</div>
 			</div>
 		);
