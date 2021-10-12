@@ -2,7 +2,6 @@
 
 <?php $menuItems = wp_get_nav_menu_items('nav'); ?>
 
-<h1>footer</h1>
 <footer>
     <div class="left-footer">
         <ul>

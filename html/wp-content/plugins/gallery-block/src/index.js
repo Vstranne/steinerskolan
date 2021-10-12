@@ -27,9 +27,11 @@ registerBlockType("create-block/gallery-block", {
 	edit: ({ attributes, setAttributes }) => {
 		const ALLOWED_BLOCKS = ["core/image"];
 		return (
-			<div className="gallery-block">
-				<p>Add 1 alumni card and 1 gallery block</p>
-				<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+			<div {...useBlockProps()}>
+				<div className="gallery-block">
+					<p>Add 1 alumni card and 1 gallery block</p>
+					<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+				</div>
 			</div>
 		);
 	},

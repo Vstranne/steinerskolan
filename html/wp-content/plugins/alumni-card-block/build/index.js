@@ -39,6 +39,10 @@ __webpack_require__.r(__webpack_exports__);
       source: "text",
       selector: ".alumni__card__subtitle"
     },
+    quote: {
+      source: "text",
+      selector: ".alumni__card__quote"
+    },
     body: {
       type: "array",
       source: "children",
@@ -79,7 +83,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
 
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "alumni-card-container"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
       onChange: content => setAttributes({
@@ -94,6 +98,13 @@ __webpack_require__.r(__webpack_exports__);
       }),
       value: attributes.subtitle,
       placeholder: "Your Alumni Name",
+      className: "heading"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
+      onChange: content => setAttributes({
+        quote: content
+      }),
+      value: attributes.quote,
+      placeholder: "Your Alumni Quote",
       className: "heading"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
       onChange: content => setAttributes({
@@ -114,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
       render: ({
         open
       }) => getImageButton(open)
-    }));
+    })));
   },
 
   /**
@@ -145,13 +156,19 @@ __webpack_require__.r(__webpack_exports__);
 
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "alumni__card"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "alumni__header__container"
     }, cardImage(attributes.imageUrl, attributes.imageAlt), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "alumni__card__content"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: "alumni__title__container"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
       className: "alumni__card__title"
-    }, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", {
-      className: "alumni__card_subtitle"
-    }, attributes.subtitle), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    }, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: "alumni__card__subtitle"
+    }, attributes.subtitle))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "alumni__card__content"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", {
+      className: "alumni__card__quote"
+    }, attributes.quote), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "alumni__card__body"
     }, attributes.body)));
   }

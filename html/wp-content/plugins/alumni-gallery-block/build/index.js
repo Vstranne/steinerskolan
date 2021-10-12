@@ -39,11 +39,11 @@ __webpack_require__.r(__webpack_exports__);
     setAttributes
   }) => {
     const ALLOWED_BLOCKS = ["create-block/alumni-card-block", "create-block/gallery-block"];
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "alumni-gallery-block"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Add 1 alumni card and 1 gallery block"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
       allowedBlocks: ALLOWED_BLOCKS
-    }));
+    })));
   },
 
   /**

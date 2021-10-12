@@ -6,6 +6,8 @@ Theme Name: Steinertheme
 
 * {
   margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: #4a4d5e;
 }
 
 body {
@@ -16,6 +18,10 @@ h1 {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
+}
+
+h2 {
+  font-size: 36px;
 }
 
 h3 {

@@ -29,6 +29,10 @@ registerBlockType("create-block/alumni-card-block", {
 			source: "text",
 			selector: ".alumni__card__subtitle",
 		},
+		quote: {
+			source: "text",
+			selector: ".alumni__card__quote",
+		},
 		body: {
 			type: "array",
 			source: "children",
@@ -69,33 +73,41 @@ registerBlockType("create-block/alumni-card-block", {
 		};
 
 		return (
-			<div className="alumni-card-container">
-				<PlainText
-					onChange={(content) => setAttributes({ title: content })}
-					value={attributes.title}
-					placeholder="Your Title"
-					className="heading"
-				/>
-				<PlainText
-					onChange={(content) => setAttributes({ subtitle: content })}
-					value={attributes.subtitle}
-					placeholder="Your Alumni Name"
-					className="heading"
-				/>
-				<RichText
-					onChange={(content) => setAttributes({ body: content })}
-					value={attributes.body}
-					multiline="p"
-					placeholder="Your Alumni Text"
-				/>
-				<MediaUpload
-					onSelect={(media) => {
-						setAttributes({ imageAlt: media.alt, imageUrl: media.url });
-					}}
-					type="image"
-					value={attributes.imageID}
-					render={({ open }) => getImageButton(open)}
-				/>
+			<div {...useBlockProps()}>
+				<div className="alumni-card-container">
+					<PlainText
+						onChange={(content) => setAttributes({ title: content })}
+						value={attributes.title}
+						placeholder="Your Title"
+						className="heading"
+					/>
+					<PlainText
+						onChange={(content) => setAttributes({ subtitle: content })}
+						value={attributes.subtitle}
+						placeholder="Your Alumni Name"
+						className="heading"
+					/>
+					<PlainText
+						onChange={(content) => setAttributes({ quote: content })}
+						value={attributes.quote}
+						placeholder="Your Alumni Quote"
+						className="heading"
+					/>
+					<RichText
+						onChange={(content) => setAttributes({ body: content })}
+						value={attributes.body}
+						multiline="p"
+						placeholder="Your Alumni Text"
+					/>
+					<MediaUpload
+						onSelect={(media) => {
+							setAttributes({ imageAlt: media.alt, imageUrl: media.url });
+						}}
+						type="image"
+						value={attributes.imageID}
+						render={({ open }) => getImageButton(open)}
+					/>
+				</div>
 			</div>
 		);
 	},
@@ -124,10 +136,15 @@ registerBlockType("create-block/alumni-card-block", {
 
 		return (
 			<div className="alumni__card">
-				{cardImage(attributes.imageUrl, attributes.imageAlt)}
+				<div className="alumni__header__container">
+					{cardImage(attributes.imageUrl, attributes.imageAlt)}
+					<div className="alumni__title__container">
+						<h2 className="alumni__card__title">{attributes.title}</h2>
+						<h3 className="alumni__card__subtitle">{attributes.subtitle}</h3>
+					</div>
+				</div>
 				<div className="alumni__card__content">
-					<h3 className="alumni__card__title">{attributes.title}</h3>
-					<h4 className="alumni__card_subtitle">{attributes.subtitle}</h4>
+					<h1 className="alumni__card__quote">{attributes.quote}</h1>
 					<div className="alumni__card__body">{attributes.body}</div>
 				</div>
 			</div>

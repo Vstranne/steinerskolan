@@ -7,20 +7,31 @@
 
 .wp-block-create-block-alumni-card-block {
 	background-color: #21759b;
-	color: #fff;
 	padding: 2px;
 }
 
 .alumni__card {
-	display: flex;
-	flex-direction: column;
-	height: 590px;
-	width: 416px;
-	background-color: #bdd0ec;
-
+	width: 600px;
+	background-color: #ffebfb;
+	.alumni__header__container {
+		display: flex;
+	}
 	img {
-		height: 242px;
-		width: 100%;
-		object-fit: cover;
+		border-radius: 50%;
+		height: 123px;
+		width: 123px;
+		margin: 25px;
+	}
+	.alumni__title__container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.alumni__card__quote {
+		text-align: center;
+		margin: 15px;
+	}
+	.alumni__card__body {
+		margin: 15px;
 	}
 }

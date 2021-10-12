@@ -9,22 +9,33 @@
  */
 .wp-block-create-block-alumni-card-block {
   background-color: #21759b;
-  color: #fff;
   padding: 2px;
 }
 
 .alumni__card {
+  width: 600px;
+  background-color: #ffebfb;
+}
+.alumni__card .alumni__header__container {
   display: flex;
-  flex-direction: column;
-  height: 590px;
-  width: 416px;
-  background-color: #bdd0ec;
 }
 .alumni__card img {
-  height: 242px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 50%;
+  height: 123px;
+  width: 123px;
+  margin: 25px;
+}
+.alumni__card .alumni__title__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.alumni__card .alumni__card__quote {
+  text-align: center;
+  margin: 15px;
+}
+.alumni__card .alumni__card__body {
+  margin: 15px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

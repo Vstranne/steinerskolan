@@ -30,9 +30,11 @@ registerBlockType("create-block/alumni-gallery-block", {
 			"create-block/gallery-block",
 		];
 		return (
-			<div className="alumni-gallery-block">
-				<p>Add 1 alumni card and 1 gallery block</p>
-				<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+			<div {...useBlockProps()}>
+				<div className="alumni-gallery-block">
+					<p>Add 1 alumni card and 1 gallery block</p>
+					<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+				</div>
 			</div>
 		);
 	},
