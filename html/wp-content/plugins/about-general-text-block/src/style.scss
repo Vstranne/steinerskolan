@@ -16,27 +16,73 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	p {
 		line-height: 1.2;
 		margin-bottom: 10px;
 	}
 }
+.general__wrapper {
+	width: 80%;
+	max-width: 1400px;
+}
 
 .general__grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	width: 80%;
+	width: 100%;
+	column-gap: 20px;
+	row-gap: 20p;
 }
 .structure,
 .fritids,
 .kitchen {
-	width: 500px;
-	margin: 20px;
+	padding-right: 40px;
 }
 .general__title {
 	grid-column: 1 / 3;
 	margin: 20px;
+	margin-left: 0;
+}
+.structure__title,
+.fritids__title,
+.kitchen__title__one,
+.kitchen__title__two {
+	margin-bottom: 8px;
 }
 .kitchen__title__two {
 	opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+	.general__wrapper {
+		width: 100%;
+	}
+	.general__title {
+		padding-left: 30px;
+	}
+	.general__grid {
+		display: flex;
+		flex-direction: column;
+	}
+	.structure,
+	.fritids {
+		padding: 30px;
+	}
+	.fritids {
+		background-color: #c4d7bc;
+	}
+	.kitchen {
+		background-color: #bdd0ec;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 30px;
+	}
+	.kitchen__title__one {
+		padding-top: 30px;
+	}
+	.kitchen__title__two {
+		display: none;
+	}
 }

@@ -8,16 +8,68 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-contact-text-block {
-  background-color: #21759b;
-  color: #fff;
+  background-color: red;
+  color: black;
   padding: 2px;
+}
+
+.contact__text {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.contact__text__container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1400px;
 }
 
 .contact__text__wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-top: 20px;
   justify-content: space-between;
+}
+.contact__text__wrapper div {
+  width: 33%;
+}
+
+.contact__text__title {
+  margin-bottom: 40px;
+}
+
+.contact__text__body__left {
+  padding-left: 0;
+}
+.contact__text__body__left p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact__text__body__center,
+.contact__text__body__right {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .contact__text__wrapper {
+    flex-direction: column;
+  }
+  .contact__text__wrapper div {
+    width: 66%;
+  }
+
+  .contact__text__body__center,
+.contact__text__body__right {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

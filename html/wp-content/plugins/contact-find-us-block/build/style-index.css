@@ -24,22 +24,85 @@
 }
 
 .contact__find__us {
-  width: 100%;
+  width: calc(100% - 100px);
   background-color: white;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   padding: 50px;
 }
-.contact__find__us .contact__find__us__container {
+
+.contact__find__us__container {
   background-color: #bdd0ec;
+  width: 80%;
+  max-width: 1400px;
+  padding: 57px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
 }
-.contact__find__us .contact__find__us__map {
+
+.contact__find__us__map {
+  width: 500px;
+  height: 500px;
+}
+
+.contact__find__us__content {
   max-width: 50%;
+  padding-right: 100px;
 }
-.contact__find__us .contact__find__us__content {
-  width: 50%;
+.contact__find__us__content h1 {
+  margin-bottom: 50px;
+}
+.contact__find__us__content span {
+  font-weight: bold;
+}
+.contact__find__us__content p {
+  margin-bottom: 15px;
+}
+.contact__find__us__content div {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact__find__us__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact__find__us__container {
+    padding: 15px;
+  }
+
+  .contact__find__us__map {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact__find__us__content {
+    max-width: 80%;
+    padding-right: 0px;
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 300px;
+  }
+
+  .mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

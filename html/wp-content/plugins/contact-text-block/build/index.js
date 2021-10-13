@@ -60,8 +60,10 @@ __webpack_require__.r(__webpack_exports__);
     className,
     setAttributes
   }) => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
       className: "contact__text"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "contact__text__container"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
       onChange: content => setAttributes({
         title: content
@@ -98,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
       value: attributes.bodyright,
       multiline: "p",
       placeholder: "Your text"
-    }))));
+    }))))));
   },
 
   /**
@@ -109,6 +111,8 @@ __webpack_require__.r(__webpack_exports__);
   }) => {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
       className: "contact__text"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "contact__text__container"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
       className: "contact__text__title"
     }, attributes.title)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -119,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
       className: "contact__text__body__center"
     }, attributes.bodycenter), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "contact__text__body__right"
-    }, attributes.bodyright)));
+    }, attributes.bodyright))));
   }
 });
 

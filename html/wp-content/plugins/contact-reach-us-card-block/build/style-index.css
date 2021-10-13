@@ -16,6 +16,16 @@
 .reach__us__card {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+}
+.reach__us__card h3 {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .reach__us__card {
+    width: 350px;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/
