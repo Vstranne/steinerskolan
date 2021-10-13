@@ -24,8 +24,8 @@
     <ul class="text-right">
         <li><a href="contact.asp">Karriär</a></li>
         <li><a href="https://portal.idunsoft.se">Idunsoft</a></li>
-        <div class="icon-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook.png" alt="">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.png" alt=""></div>
+        <a href="https://www.facebook.com/rudolfsteinerskolanGBGsforaldraforening/"><div class="icon-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook.png" alt=""></a>
+        <a href="https://www.instagram.com/rudolfsteinerskolangoteborg/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.png" alt=""></a></div>
     </ul>
     </div>
 </footer>
