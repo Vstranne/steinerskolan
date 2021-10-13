@@ -7,6 +7,49 @@
 
 .wp-block-create-block-about-teacher-block {
 	background-color: #21759b;
-	color: #fff;
+	color: black;
 	padding: 2px;
+}
+
+.teacher {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.teacher__container {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+.teacher__cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 30px;
+}
+@media screen and (max-width: 992px) {
+	.teacher__container {
+		width: 90%;
+	}
+
+	.teacher__cards {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.teacher__cards {
+		justify-content: space-around;
+	}
 }

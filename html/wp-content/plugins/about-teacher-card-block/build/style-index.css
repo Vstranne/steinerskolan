@@ -18,11 +18,12 @@
   width: 360px;
   background-color: white;
   position: relative;
+  margin-bottom: 30px;
 }
 .teacher__card img {
   border-radius: 50%;
   height: 360px;
-  width: 360px;
+  width: 100%;
   position: absolute;
   top: 0;
   -o-object-fit: cover;
@@ -36,7 +37,7 @@
   bottom: 0;
   border-radius: 10px;
   height: 512px;
-  width: 360px;
+  width: 100%;
 }
 .teacher__card .teacher__card__content__container .teacher__card__content {
   margin: 200px 20px 24px 20px;
