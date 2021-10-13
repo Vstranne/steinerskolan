@@ -84,27 +84,29 @@ registerBlockType("create-block/hero-block", {
 		};
 
 		return (
-			<div className="hero-container">
-				<PlainText
-					onChange={(content) => setAttributes({ title: content })}
-					value={attributes.title}
-					placeholder="Your Hero Title"
-					className="heading"
-				/>
-				<RichText
-					onChange={(content) => setAttributes({ body: content })}
-					value={attributes.body}
-					multiline="p"
-					placeholder="Your Hero Text"
-				/>
-				<MediaUpload
-					onSelect={(media) => {
-						setAttributes({ imageAlt: media.alt, imageUrl: media.url });
-					}}
-					type="image"
-					value={attributes.imageID}
-					render={({ open }) => getImageButton(open)}
-				/>
+			<div {...useBlockProps()}>
+				<div className="hero-container">
+					<PlainText
+						onChange={(content) => setAttributes({ title: content })}
+						value={attributes.title}
+						placeholder="Your Hero Title"
+						className="heading"
+					/>
+					<RichText
+						onChange={(content) => setAttributes({ body: content })}
+						value={attributes.body}
+						multiline="p"
+						placeholder="Your Hero Text"
+					/>
+					<MediaUpload
+						onSelect={(media) => {
+							setAttributes({ imageAlt: media.alt, imageUrl: media.url });
+						}}
+						type="image"
+						value={attributes.imageID}
+						render={({ open }) => getImageButton(open)}
+					/>
+				</div>
 			</div>
 		);
 	},
