@@ -29,6 +29,9 @@
   display: flex;
   flex-direction: column;
 }
+.teacher__container h2 {
+  margin-bottom: 10px;
+}
 
 .teacher__cards {
   display: flex;

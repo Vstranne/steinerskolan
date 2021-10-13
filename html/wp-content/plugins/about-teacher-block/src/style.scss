@@ -26,6 +26,9 @@
 	max-width: 1400px;
 	display: flex;
 	flex-direction: column;
+	h2 {
+		margin-bottom: 10px;
+	}
 }
 
 .teacher__cards {
