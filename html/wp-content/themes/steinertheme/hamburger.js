@@ -6,7 +6,6 @@ function hamburgerToggle() {
 
   dropDown.classList.toggle("on");
   hamburgerMenu.classList.toggle("on");
-  console.log("hello");
 }
 
 const hamburgerButton = document.querySelector("button");

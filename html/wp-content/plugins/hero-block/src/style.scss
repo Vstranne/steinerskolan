@@ -28,9 +28,6 @@
 		.card__title {
 			margin: 15px;
 			max-width: 800px;
-			@media (max-width: 800px) {
-				font-size: 36px;
-			}
 		}
 
 		.card__body {
@@ -49,14 +46,31 @@
 	}
 }
 
-/* Mobile */
+/* Tablet */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) {
 	.card {
-		flex-direction: column;
+		flex-direction: column-reverse;
+		.card__content {
+			margin: 25px;
+			width: 70%;
+		}
 		.card__image__wrapper {
 			width: auto;
-			height: 50%;
+		}
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+	.card {
+		flex-direction: column-reverse;
+		.card__content {
+			margin: 25px;
+			width: 70%;
+		}
+		.card__image__wrapper {
+			width: auto;
 		}
 	}
 }

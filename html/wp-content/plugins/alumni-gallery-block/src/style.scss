@@ -13,7 +13,22 @@
 .alumni__gallery {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	background-color: #ffebfb;
 	padding: 100px;
+	@media (max-width: 1230px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 15px;
+	}
+	@media (max-width: 960px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 15px;
+	}
+	@media (max-width: 480px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 15px;
+	}
 }

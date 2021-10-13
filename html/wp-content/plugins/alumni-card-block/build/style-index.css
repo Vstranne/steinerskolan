@@ -16,8 +16,30 @@
   width: 600px;
   background-color: #ffebfb;
 }
+@media (max-width: 960px) {
+  .alumni__card {
+    width: 400px;
+    margin: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .alumni__card {
+    width: 300px;
+    margin: 15px;
+  }
+}
 .alumni__card .alumni__header__container {
   display: flex;
+}
+@media (max-width: 480px) {
+  .alumni__card .alumni__header__container {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .alumni__card .alumni__card__content {
+    margin: 10px;
+  }
 }
 .alumni__card img {
   border-radius: 50%;

@@ -4,6 +4,11 @@
 
 <footer>
     <div class="left-footer">
+    <?php if (has_custom_logo()) : ?>
+            <div class="site-logo-footer"><?php the_custom_logo(); ?></div>
+        <?php else : ?>
+            <a class="site-logo-text" href="<?= site_url(); ?>"> <?php bloginfo('name'); ?></a>
+        <?php endif; ?>
         <ul>
             <li>Tallhöjdsgatan 1, 416 74 Göteborg</li>
             <li>rudolf@steinerskolan.se</li>

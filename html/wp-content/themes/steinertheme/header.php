@@ -32,11 +32,11 @@
                 </ul>
         </div>
         <div class="dropdown">
-        <div class="hamburgercross"><img
+            <div class="hamburgercross"><img
             src="<?php echo get_stylesheet_directory_uri(); ?>/images/hamburgercross.png"
             alt="hamburgercross"
             class=""/>
-        </div>
+            </div>
             <div class="dropdown-list">
                     <?php foreach ($menuItems as $item) : ?>
                         <li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>

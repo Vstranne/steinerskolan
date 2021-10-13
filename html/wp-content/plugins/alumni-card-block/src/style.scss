@@ -13,8 +13,24 @@
 .alumni__card {
 	width: 600px;
 	background-color: #ffebfb;
+	@media (max-width: 960px) {
+		width: 400px;
+		margin: 15px;
+	}
+	@media (max-width: 480px) {
+		width: 300px;
+		margin: 15px;
+	}
 	.alumni__header__container {
 		display: flex;
+		@media (max-width: 480px) {
+			justify-content: center;
+		}
+	}
+	.alumni__card__content {
+		@media (max-width: 480px) {
+			margin: 10px;
+		}
 	}
 	img {
 		border-radius: 50%;
