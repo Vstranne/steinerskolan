@@ -66,6 +66,7 @@
     width: auto;
     -ms-grid-row: 1;
     grid-row: 1;
+    max-height: 440px;
   }
   .card .card__image__wrapper .card__image {
     width: 100vw;

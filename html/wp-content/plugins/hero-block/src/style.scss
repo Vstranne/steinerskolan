@@ -60,6 +60,7 @@
 		.card__image__wrapper {
 			width: auto;
 			grid-row: 1;
+			max-height: 440px;
 			.card__image {
 				width: 100vw;
 				object-fit: cover;
