@@ -38,6 +38,7 @@ p {
 }
 
 nav {
+  z-index: 10;
   font-family: "Nunito", sans-serif;
   display: flex;
   align-items: center;
@@ -193,7 +194,7 @@ footer {
 
   .hamburger-menu {
     display: flex;
-    z-index: 2;
+    z-index: 10;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -206,7 +207,7 @@ footer {
   }
 
   .dropdown {
-    z-index: 3;
+    z-index: 0;
     display: none;
     flex-direction: column;
     width: 100%;
@@ -251,6 +252,7 @@ footer {
 
   .dropdown.on {
     display: flex;
+    z-index: 10;
   }
   .right-footer {
     margin: 0px;
