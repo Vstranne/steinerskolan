@@ -1,1 +1,59 @@
-.wp-block-create-block-about-teacher-block{background-color:#21759b;color:#fff;padding:2px}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-about-teacher-block {
+  background-color: #21759b;
+  color: black;
+  padding: 2px;
+}
+
+.teacher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.teacher__container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .teacher__container {
+    width: 90%;
+  }
+
+  .teacher__cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .teacher__cards {
+    justify-content: space-around;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,38 +1,72 @@
-/**
- * Registers a new block provided a unique name and an object defining its behavior.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-import { registerBlockType } from '@wordpress/blocks';
+import "./style.scss";
+import { registerBlockType } from "@wordpress/blocks";
+import {
+	InspectorControls,
+	PlainText,
+	useBlockProps,
+	ColorPalette,
+	MediaUploadCheck,
+	MediaUpload,
+	RichText,
+	InnerBlocks,
+} from "@wordpress/block-editor";
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './style.scss';
+import { PanelBody, TabbableContainer, Button } from "@wordpress/components";
 
-/**
- * Internal dependencies
- */
-import Edit from './edit';
-import save from './save';
+import "./editor.scss";
 
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-registerBlockType('create-block/about-teacher-block', {
+registerBlockType("create-block/about-teacher-block", {
+	title: "About teacher block",
+	description: "About teacher",
+	icon: "heart",
+	category: "common",
+
+	attributes: {
+		body: {
+			type: "array",
+			source: "children",
+			selector: ".teacher__body",
+		},
+	},
 	/**
 	 * @see ./edit.js
 	 */
-	edit: Edit,
+	edit: ({ attributes, setAttributes }) => {
+		const ALLOWED_BLOCKS = ["create-block/about-teacher-card-block"];
+		return (
+			<div {...useBlockProps()}>
+				<section className="teacher">
+					<div className="teacher__container">
+						<h2>Lärare</h2>
+						<RichText
+							onChange={(content) => setAttributes({ body: content })}
+							value={attributes.body}
+							multiline="p"
+							placeholder="Your General Teacher Text"
+						/>
+						<div className="teacher__cards">
+							<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+						</div>
+					</div>
+				</section>
+			</div>
+		);
+	},
 
 	/**
 	 * @see ./save.js
 	 */
-	save,
+	save: ({ attributes }) => {
+		return (
+			<section className="teacher" id="teacher">
+				<div className="teacher__container">
+					<h2>Lärare</h2>
+					<div className="teacher__body">{attributes.body}</div>
+					<div className="teacher__cards">
+						<InnerBlocks.Content />
+					</div>
+				</div>
+			</section>
+		);
+	},
 });
