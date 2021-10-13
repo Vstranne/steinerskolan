@@ -13,6 +13,10 @@
 .alumni__card {
 	width: 600px;
 	background-color: #ffebfb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	@media (max-width: 960px) {
 		width: 400px;
 		margin: 15px;
