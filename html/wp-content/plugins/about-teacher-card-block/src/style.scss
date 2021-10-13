@@ -42,3 +42,16 @@
 		}
 	}
 }
+@media screen and (max-width: 900px) {
+	.teacher__card {
+		img {
+			border-radius: 10px 10px 0 0;
+		}
+		.teacher__card__content__container {
+			height: 100%;
+			.teacher__card__content {
+				margin-top: 380px;
+			}
+		}
+	}
+}
