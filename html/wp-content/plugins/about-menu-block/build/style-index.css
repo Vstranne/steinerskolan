@@ -49,6 +49,7 @@
 .category {
   font-size: 24px;
   margin-left: 0;
+  font-weight: bold;
 }
 
 .sub__category {
