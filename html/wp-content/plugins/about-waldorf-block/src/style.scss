@@ -1,0 +1,57 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-about-waldorf-block {
+	background-color: #21759b;
+	color: black;
+	padding: 2px;
+}
+
+.waldorf {
+	width: 100%;
+	background-color: #ffebfb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.waldorf__container {
+	width: 80%;
+	max-width: 1400px;
+	display: flex;
+	flex-direction: column;
+	h2 {
+		margin-bottom: 30px;
+	}
+}
+.waldorf__body__wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	article {
+		// max-width: 50%;
+	}
+	p {
+		margin-bottom: 10px;
+		max-width: 500px;
+	}
+	h3 {
+		margin-bottom: 15px;
+	}
+	img {
+		margin-bottom: 15px;
+		max-width: 500px;
+		width: -webkit-fill-available;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.waldorf__body__wrapper {
+		flex-direction: column;
+	}
+}

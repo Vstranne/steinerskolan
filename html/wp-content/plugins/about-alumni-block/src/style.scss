@@ -1,0 +1,61 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-about-alumni-block {
+	background-color: #21759b;
+	color: black;
+	padding: 2px;
+}
+
+.alumni {
+	background-color: #ffebfb;
+	width: 100%;
+	display: flex;
+	height: 500px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.alumni__container {
+	width: 80%;
+	max-width: 1400px;
+	display: flex;
+	flex-direction: column;
+}
+.alumni__content__container {
+	position: relative;
+	img {
+		position: absolute;
+		left: 0;
+		border-radius: 50%;
+		height: 360px;
+		width: 360px;
+		object-fit: cover;
+		z-index: 1;
+	}
+}
+.alumni__content {
+	background-color: #c4d7bc;
+	width: calc(100% - 180px);
+	height: 360px;
+	position: absolute;
+	right: 0;
+	border-radius: 10px;
+}
+.alumni__title,
+.alumni__subtitle,
+.alumni__body {
+	margin-left: 250px;
+	margin-right: 100px;
+}
+.alumni__title {
+	margin-top: 20px;
+}
+.alumni__subtitle {
+	margin-bottom: 10px;
+}
