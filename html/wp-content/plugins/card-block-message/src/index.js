@@ -35,14 +35,16 @@ registerBlockType("create-block/card-block-message", {
 		const blockProps = useBlockProps();
 		const ALLOWED_BLOCKS = ["create-block/card-block"];
 		return (
-			<div className="message-block">
-				<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
-				<PlainText
-					onChange={(content) => setAttributes({ body: content })}
-					value={attributes.body}
-					placeholder="Your Message"
-					className="heading"
-				/>
+			<div {...useBlockProps()}>
+				<div className="message-block">
+					<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+					<PlainText
+						onChange={(content) => setAttributes({ body: content })}
+						value={attributes.body}
+						placeholder="Your Message"
+						className="heading"
+					/>
+				</div>
 			</div>
 		);
 	},

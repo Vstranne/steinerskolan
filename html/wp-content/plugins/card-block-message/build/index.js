@@ -46,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
   }) => {
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)();
     const ALLOWED_BLOCKS = ["create-block/card-block"];
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "message-block"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
       allowedBlocks: ALLOWED_BLOCKS
@@ -57,7 +57,7 @@ __webpack_require__.r(__webpack_exports__);
       value: attributes.body,
       placeholder: "Your Message",
       className: "heading"
-    }));
+    })));
   },
 
   /**

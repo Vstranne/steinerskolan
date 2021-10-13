@@ -75,7 +75,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
 
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "card-container"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
       onChange: content => setAttributes({
@@ -103,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
       render: ({
         open
       }) => getImageButton(open)
-    }));
+    })));
   },
 
   /**

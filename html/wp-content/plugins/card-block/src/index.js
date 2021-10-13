@@ -65,27 +65,29 @@ registerBlockType("create-block/card-block", {
 		};
 
 		return (
-			<div className="card-container">
-				<PlainText
-					onChange={(content) => setAttributes({ title: content })}
-					value={attributes.title}
-					placeholder="Your Hero Title"
-					className="heading"
-				/>
-				<RichText
-					onChange={(content) => setAttributes({ body: content })}
-					value={attributes.body}
-					multiline="p"
-					placeholder="Your Hero Text"
-				/>
-				<MediaUpload
-					onSelect={(media) => {
-						setAttributes({ imageAlt: media.alt, imageUrl: media.url });
-					}}
-					type="image"
-					value={attributes.imageID}
-					render={({ open }) => getImageButton(open)}
-				/>
+			<div {...useBlockProps()}>
+				<div className="card-container">
+					<PlainText
+						onChange={(content) => setAttributes({ title: content })}
+						value={attributes.title}
+						placeholder="Your Hero Title"
+						className="heading"
+					/>
+					<RichText
+						onChange={(content) => setAttributes({ body: content })}
+						value={attributes.body}
+						multiline="p"
+						placeholder="Your Hero Text"
+					/>
+					<MediaUpload
+						onSelect={(media) => {
+							setAttributes({ imageAlt: media.alt, imageUrl: media.url });
+						}}
+						type="image"
+						value={attributes.imageID}
+						render={({ open }) => getImageButton(open)}
+					/>
+				</div>
 			</div>
 		);
 	},
