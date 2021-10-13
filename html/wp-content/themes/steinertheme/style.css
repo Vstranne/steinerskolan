@@ -11,7 +11,8 @@ Theme Name: Steinertheme
 }
 
 body {
-  background: grey;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -178,7 +179,7 @@ footer {
     font-size: 14px;
   }
   nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
   }
@@ -195,7 +196,7 @@ footer {
   .hamburger-menu {
     display: flex;
     z-index: 10;
-    position: fixed;
+    position: sticky;
     top: 10px;
     right: 10px;
     border-style: none;
@@ -297,7 +298,7 @@ footer {
     width: 250px;
   }
   nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
   }

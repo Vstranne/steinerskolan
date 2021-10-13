@@ -10,7 +10,6 @@
 <body <?php body_class(); ?>>
 
 <?php $menuItems = wp_get_nav_menu_items('nav'); ?>
-
     <nav>
         <div class="left-nav">
         <?php if (has_custom_logo()) : ?>
