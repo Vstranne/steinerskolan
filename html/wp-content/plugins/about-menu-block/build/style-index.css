@@ -7,70 +7,88 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-about-waldorf-block {
+.wp-block-create-block-about-menu-block {
   background-color: #21759b;
   color: black;
   padding: 2px;
 }
 
-.waldorf {
+.about__menu {
   width: 100%;
   background-color: #ffebfb;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.waldorf__container {
+.about__menu__container {
   width: 80%;
   max-width: 1400px;
-  display: flex;
-  flex-direction: column;
-}
-.waldorf__container h2 {
-  margin-bottom: 30px;
 }
 
-.waldorf__body__wrapper {
+.about__menu__container__grid {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 20px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.waldorf__body__wrapper p {
+.about__menu__container__grid div {
+  padding-top: 20px;
+}
+
+.about__nav {
+  display: flex;
+  flex-direction: column;
+  background: #ffebfb;
+}
+
+.category {
+  font-size: 24px;
+  margin-left: 0;
+}
+
+.sub__category {
+  display: flex;
+  flex-direction: column;
+}
+.sub__category a {
+  margin: 0;
+  font-size: 20px;
+  text-decoration: underline;
   margin-bottom: 10px;
-  max-width: 500px;
-}
-.waldorf__body__wrapper h3 {
-  margin-bottom: 15px;
-}
-.waldorf__body__wrapper img {
-  margin-bottom: 15px;
-  max-width: 500px;
-  width: -webkit-fill-available;
 }
 
 @media screen and (max-width: 900px) {
-  .waldorf__body__wrapper {
+  .about__menu {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .about__menu__container__grid {
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
   }
-  .waldorf__body__wrapper article {
-    padding-left: 30px;
-    padding-right: 30px;
+
+  .sub__category {
+    flex-direction: row;
+  }
+  .sub__category a {
+    margin-right: 25px;
+    font-size: 16px;
   }
 
-  .waldorf__container {
-    width: 100%;
+  .category {
+    font-size: 20px;
+    font-weight: bold;
   }
-  .waldorf__container h2 {
-    margin-left: 30px;
+
+  .about__menu__container {
+    width: 100%;
   }
 }
 

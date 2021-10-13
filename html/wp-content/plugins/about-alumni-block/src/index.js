@@ -135,9 +135,11 @@ registerBlockType("create-block/about-alumni-block", {
 					<div className="alumni__content__container">
 						{cardImage(attributes.imageUrl, attributes.imageAlt)}
 						<div className="alumni__content">
-							<h2 className="alumni__title">{attributes.title}</h2>
-							<h3 className="alumni__subtitle">{attributes.subtitle}</h3>
-							<div className="alumni__body">{attributes.body}</div>
+							<div className="alumni__card__content">
+								<h2 className="alumni__title">{attributes.title}</h2>
+								<h3 className="alumni__subtitle">{attributes.subtitle}</h3>
+								<div className="alumni__body">{attributes.body}</div>
+							</div>
 						</div>
 					</div>
 				</div>

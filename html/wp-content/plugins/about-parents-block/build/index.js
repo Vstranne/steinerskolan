@@ -25,32 +25,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("create-block/about-alumni-block", {
-  title: "About alumni block",
-  description: "About alumni block",
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.registerBlockType)("create-block/about-parents-block", {
+  title: "About parents block",
+  description: "About parents block",
   icon: "heart",
   category: "common",
   attributes: {
-    title: {
-      source: "text",
-      selector: ".alumni__title"
-    },
-    subtitle: {
-      source: "text",
-      selector: ".alumni__subtitle"
-    },
-    body: {
+    bodyOne: {
       type: "array",
       source: "children",
-      selector: ".alumni__body"
+      selector: ".association__body"
     },
-    imageAlt: {
-      attribute: "alt",
-      selector: ".alumni__image"
+    bodyTwo: {
+      type: "array",
+      source: "children",
+      selector: ".board__body"
     },
-    imageUrl: {
-      attribute: "src",
-      selector: "alumni__image"
+    bodyThree: {
+      type: "array",
+      source: "children",
+      selector: ".member__body"
     }
   },
 
@@ -62,63 +56,39 @@ __webpack_require__.r(__webpack_exports__);
     className,
     setAttributes
   }) => {
-    const getImageButton = openEvent => {
-      if (attributes.imageUrl) {
-        return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-          src: attributes.imageUrl,
-          onClick: openEvent,
-          className: "image"
-        });
-      } else {
-        return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-          className: "button-container"
-        }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-          onClick: openEvent,
-          className: "button button-large"
-        }, "Pick an image"));
-      }
-    };
-
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-      className: "alumni"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
-      onSelect: media => {
-        setAttributes({
-          imageAlt: media.alt,
-          imageUrl: media.url
-        });
-      },
-      type: "image",
-      value: attributes.imageID,
-      render: ({
-        open
-      }) => getImageButton(open)
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "teacher__card__content__container"
+      className: "parents",
+      id: "parents"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "teacher__card__content"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
+      className: "parents__container"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "F\xF6r\xE4lder p\xE5 skolan"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "association"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "F\xF6r\xE4ldraf\xF6rening"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
       onChange: content => setAttributes({
-        title: content
+        bodyOne: content
       }),
-      value: attributes.title,
-      placeholder: "Alumni name",
-      className: "heading"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.PlainText, {
-      onChange: content => setAttributes({
-        subtitle: content
-      }),
-      value: attributes.subtitle,
-      placeholder: "Your Alumni Subtitle",
-      className: "heading"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
-      onChange: content => setAttributes({
-        body: content
-      }),
-      value: attributes.body,
+      value: attributes.bodyOne,
       multiline: "p",
-      placeholder: "Your Alumni Text"
-    })))));
+      placeholder: "Your text, multiline accepted"
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "board"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Styrelsen"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
+      onChange: content => setAttributes({
+        bodyTwo: content
+      }),
+      value: attributes.bodyTwo,
+      multiline: "p",
+      placeholder: "Your text, multiline accepted"
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "member"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Medlem"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
+      onChange: content => setAttributes({
+        bodyThree: content
+      }),
+      value: attributes.bodyThree,
+      multiline: "p",
+      placeholder: "Your text, multiline accepted"
+    }))))));
   },
 
   /**
@@ -127,46 +97,37 @@ __webpack_require__.r(__webpack_exports__);
   save: ({
     attributes
   }) => {
-    const cardImage = (src, alt) => {
-      if (!src) return null;
-
-      if (alt) {
-        return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-          className: "teacher__card__image",
-          src: src,
-          alt: alt
-        });
-      } // if no alt selected
-
-
-      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-        className: "teacher__card__image",
-        src: src,
-        alt: "",
-        "aria-hidden": "true"
-      });
-    };
-
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-      className: "alumni",
-      id: "alumni"
+      className: "parents",
+      id: "parents"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "alumni__container"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
-      className: "alumni__container__title"
-    }, "Alumni"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "alumni__content__container"
-    }, cardImage(attributes.imageUrl, attributes.imageAlt), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "alumni__content"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "alumni__card__content"
+      className: "parents__container"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-      className: "alumni__title"
-    }, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
-      className: "alumni__subtitle"
-    }, attributes.subtitle), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "alumni__body"
-    }, attributes.body))))));
+      className: "parents__title"
+    }, "F\xF6r\xE4lder p\xE5 skolan"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "parents__grid"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("article", {
+      className: "association",
+      id: "association"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: "association__title"
+    }, "F\xF6r\xE4ldraf\xF6rening"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "association__body"
+    }, attributes.bodyOne)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("article", {
+      className: "board",
+      id: "board"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: "board__title"
+    }, "Styrelsen"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "board__body"
+    }, attributes.bodyTwo)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("article", {
+      className: "member",
+      id: "member"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+      className: "member__title"
+    }, "Medlem"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "member__body"
+    }, attributes.bodyThree)))));
   }
 });
 
@@ -391,7 +352,7 @@ module.exports = window["wp"]["element"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkabout_alumni_block"] = self["webpackChunkabout_alumni_block"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkabout_parents_block"] = self["webpackChunkabout_parents_block"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	}();

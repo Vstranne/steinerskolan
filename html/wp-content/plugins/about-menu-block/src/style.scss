@@ -1,0 +1,81 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-about-menu-block {
+	background-color: #21759b;
+	color: black;
+	padding: 2px;
+}
+
+.about__menu {
+	width: 100%;
+	background-color: #ffebfb;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.about__menu__container {
+	width: 80%;
+	max-width: 1400px;
+}
+.about__menu__container__grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	div {
+		padding-top: 20px;
+	}
+}
+.about__nav {
+	display: flex;
+	flex-direction: column;
+	background: #ffebfb;
+}
+.category {
+	font-size: 24px;
+	margin-left: 0;
+	// margin-bottom: 20px;
+}
+.sub__category {
+	display: flex;
+	flex-direction: column;
+	a {
+		margin: 0;
+		font-size: 20px;
+		text-decoration: underline;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.about__menu {
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	.about__menu__container__grid {
+		padding-left: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	.sub__category {
+		flex-direction: row;
+		a {
+			margin-right: 25px;
+			font-size: 16px;
+		}
+	}
+	.category {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.about__menu__container {
+		width: 100%;
+	}
+}

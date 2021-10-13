@@ -29,6 +29,10 @@
   display: flex;
   flex-direction: column;
 }
+.alumni__container h3 {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
 
 .alumni__content__container {
   position: relative;
@@ -66,6 +70,55 @@
 
 .alumni__subtitle {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  .alumni {
+    height: auto;
+  }
+
+  .alumni__title,
+.alumni__subtitle,
+.alumni__body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .alumni__container {
+    justify-content: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+
+  .alumni__content__container {
+    height: 800px;
+    width: 360px;
+    background-color: #ffebfb;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .alumni__content__container img {
+    border-radius: 10% 10% 0 0;
+    height: 360px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 1;
+  }
+  .alumni__content__container .alumni__content {
+    background-color: #c4d7bc;
+    box-shadow: 8px 8px 0px #e0efda;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    min-height: 512px;
+    width: 100%;
+  }
+  .alumni__content__container .alumni__content .alumni__card__content {
+    margin: 80px 20px 24px 20px;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

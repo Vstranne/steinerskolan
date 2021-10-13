@@ -7,69 +7,75 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-about-waldorf-block {
+.wp-block-create-block-about-parents-block {
   background-color: #21759b;
   color: black;
   padding: 2px;
 }
 
-.waldorf {
+.parents {
   width: 100%;
-  background-color: #ffebfb;
+  background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.waldorf__container {
+.parents__container {
   width: 80%;
   max-width: 1400px;
   display: flex;
   flex-direction: column;
 }
-.waldorf__container h2 {
+
+.parents__title {
   margin-bottom: 30px;
 }
 
-.waldorf__body__wrapper {
-  width: 100%;
+.parents__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 20px;
 }
-.waldorf__body__wrapper p {
+.parents__grid article p {
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+
+.association__title,
+.board__title,
+.member__title {
   margin-bottom: 10px;
-  max-width: 500px;
-}
-.waldorf__body__wrapper h3 {
-  margin-bottom: 15px;
-}
-.waldorf__body__wrapper img {
-  margin-bottom: 15px;
-  max-width: 500px;
-  width: -webkit-fill-available;
 }
 
 @media screen and (max-width: 900px) {
-  .waldorf__body__wrapper {
+  .parents__grid {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .waldorf__body__wrapper article {
+
+  .parents__container {
+    width: 100%;
+  }
+
+  .association,
+.board,
+.member {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .waldorf__container {
-    width: 100%;
-  }
-  .waldorf__container h2 {
+  .parents__title {
     margin-left: 30px;
   }
 }
