@@ -44,10 +44,12 @@ registerBlockType("create-block/gallery-block", {
 			<div className="gallery">
 				<div className="gallery__title">
 					<h2>Följ vår instagram för att hålla dig uppdaterad</h2>
-					<img
-						src="/wp-content/uploads/instagramlogo.svg"
-						alt="instagram logo"
-					/>
+					<a href="https://www.instagram.com/rudolfsteinerskolangoteborg/">
+						<img
+							src="/wp-content/uploads/instagramlogo.svg"
+							alt="instagram logo"
+						/>
+					</a>
 				</div>
 				<div className="gallery__image__wrapper">
 					<InnerBlocks.Content />
