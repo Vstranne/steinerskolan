@@ -42,8 +42,12 @@
 .teacher__card .teacher__card__content__container .teacher__card__content {
   margin: 200px 20px 24px 20px;
 }
+.teacher__card .teacher__card__content__container .teacher__card__content h3 {
+  line-height: 30px;
+}
 .teacher__card .teacher__card__content__container .teacher__card__content h4 {
   font-size: 20px;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 900px) {

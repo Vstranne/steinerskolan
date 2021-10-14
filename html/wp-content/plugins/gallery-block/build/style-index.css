@@ -41,11 +41,14 @@
     align-items: center;
   }
 }
-.gallery .gallery__title img {
+.gallery .gallery__title a {
+  margin: 0px;
+}
+.gallery .gallery__title a img {
   margin: 10px;
 }
 @media (max-width: 480px) {
-  .gallery .gallery__title img {
+  .gallery .gallery__title a img {
     width: 60px;
     height: 60px;
   }

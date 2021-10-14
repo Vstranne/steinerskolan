@@ -36,8 +36,12 @@
 		width: 100%;
 		.teacher__card__content {
 			margin: 200px 20px 24px 20px;
+			h3 {
+				line-height: 30px;
+			}
 			h4 {
 				font-size: 20px;
+				margin-bottom: 8px;
 			}
 		}
 	}
