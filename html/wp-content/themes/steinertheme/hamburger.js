@@ -1,5 +1,3 @@
-console.log("LOLL");
-
 function hamburgerToggle() {
   const dropDown = document.querySelector(".dropdown");
   const hamburgerMenu = document.querySelector(".hamburger-menu");
